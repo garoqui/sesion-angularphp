@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row margin-top">
+    <div class="col-mod-8">
+        <h5 class="card-title">Inicia Sesion</h5>
+<form >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Correo Electronico</label>
+    <input required email [(ngModel)]="usuario.email" name="email" #email="ngModel" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <div class="alert alert-danger" *ngIf="email.touched && email.errors && email.errors.required">Debes Digitar el Email Registrado</div>
+    <div class="alert alert-danger" *ngIf="email.touched && email.errors && email.errors.email">El Formato del Email es Invalido</div>
+   
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input [(ngModel)]="usuario.pass" name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+ 
+  <button type="button" (click)="login();"   class="btn btn-dark">Submit</button>
+  <div class="alert alert-danger" *ngIf="encontrado">Error de Usuario o Contraseña</div>
+  
+</form>
+
+
+
+
+</div>
+</div>
+</div>
