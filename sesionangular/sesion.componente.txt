@@ -33,11 +33,12 @@ this.productosservice.login(this.usuario)
   localStorage.setItem("role",jsonusu.role);
   this.router.navigate(['home']);
   this.toast.success("Bienvenido");
+  console.log("test");
   }
   else
   {
     this.encontrado=true;
-    this.toast.error("Error de Usuario o Contraseña");    
+    this.toast.error("Error de Usuario o Contraseï¿½a");    
   }
   },  
     err=>{console.log(err)
